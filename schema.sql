@@ -1,11 +1,14 @@
 /* Database schema to keep the structure of entire database. */
 
 CREATE TABLE animals(
-   id SERIAL,
-   name varchar(100),
-   date_of_birth date,
-   escape_attempts int,
-   neutered boolean,
-   weight_kg decimal
+   id INT GENERATED ALWAYS AS IDENTITY, 
+   name VARCHAR(100),
+   date_of_birth DATE,
+   escape_attempts INT,
+   neutered BOOLEAN,
+   weight_kg DECIMAL,
+   PRIMARY KEY(id)
 );
 
+/* Add a table for spiecies */
+ALTER TABLE animals ADD COLUMN species VARCHAR(100);
