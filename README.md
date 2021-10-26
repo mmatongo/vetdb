@@ -15,7 +15,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 ## Tools Used
 - PostgreSQL
 - Postgresapp
-- Postico
+- TablePlus
 
 ## Authors
 
