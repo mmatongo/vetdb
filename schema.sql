@@ -25,3 +25,22 @@ CREATE TABLE animals (
 	--Add column owner_id which is a foreign key referencing the owners table
 	owner_id INT REFERENCES owners (id)
 );
+
+CREATE TABLE vets (
+	id INT GENERATED ALWAYS AS IDENTITY,
+	name VARCHAR(100),
+	age INT,
+	date_of_graduation DATE,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE specializations (
+	vet_id INT REFERENCES vets (id),
+	species_id INT REFERENCES species (id)
+);
+
+CREATE TABLE visits (
+	vet_id INT REFERENCES vets (id),
+	animal_id INT REFERENCES animals (id),
+	date_of_visit DATE
+);
