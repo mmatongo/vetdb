@@ -390,10 +390,6 @@ GROUP BY
 
 BEGIN;
 
-/* Use JOIN to Write queries to answer the following:
- How many visits were with a vet that did not specialize in that animal's species?
- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
- */
 -- Who was the last animal seen by William Tatcher?
 SELECT
   animals.name,
