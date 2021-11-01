@@ -12,6 +12,26 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 
+## Performance Checks
+
+### Query `EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;`
+#### Before
+![1](./img/1-before.png)
+#### After
+![1](./img/1-after.png)
+
+### Query `EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;`
+#### Before
+![1](./img/2-before.png)
+#### After
+![1](./img/2-after.png)
+
+### Query `EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';`
+#### Before
+![1](./img/3-before.png)
+#### After
+![1](./img/3-after.png)
+
 ## Tools Used
 - PostgreSQL
 - Postgresapp
